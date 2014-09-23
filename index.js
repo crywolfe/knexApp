@@ -10,7 +10,9 @@ app.set('bookshelf', bookshelf);
 
 //user model setup
 var User = bookshelf.Model.extend({
-  tableName: 'users'
+  tableName: 'users',
+  hasTimestamps: ['created_at', 'updated_at']
+
 });
 
 // routes
