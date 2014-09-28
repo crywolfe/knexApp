@@ -26,6 +26,7 @@ app.get('/new', function(req, res){
   user.save().then(function(){res.send(user);});
 });
 
-var server = app.listen(3000, function(){
-  console.log("listening on port %d", server.address().port);
+var port = process.env.PORT || 9000;
+var server = app.listen(9000, function(){
+  console.log("listening on port %d", port);
 });
